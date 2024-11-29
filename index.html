@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-slate-500">
+    <section class="h-screen flex justify-center items-center">
+        <div class="bg-white w-max rounded-lg">
+        <div class="box-content p-4">
+            <form action="" class="relative ">
+                <i class="fa-solid fa-location-dot absolute -left-1 top-1/2 transform -translate-y-1/2 px-4 py-1"></i>
+                <input 
+                    type="text"
+                    placeholder="Buscar cidade"
+                    class="border-2 rounded-lg w-full py-1 pl-8 border-gray-600 focus:outline-none focus:border-gray-800"
+                    id="city_name"
+                />
+                <button id="search" type="submit" class="absolute right-0 top-1/2 transform -translate-y-1/2 px-4 py-1">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <p id="alert" class="hidden border border-dashed border-red-600 text-base p-1 rounded mt-2">Você precisa digitar uma cidade</p>
+            <div id="infos-city" class="hidden">
+                <h3 id="tittle" class="text-center font-bold text-2xl mt-4">Blumenau, SC</h3>
+                <div class="flex items-center bg-blue-400 pr-6 rounded-2xl mt-3">
+                    <img id="temp-img" src="https://openweathermap.org/img/wn/04d@2x.png" alt="">
+                    <div>
+                        <h2 id="temp" class="text-4xl font-bold text-white">32<sup>Cº</sup></h2>
+                        <p id="description" class="text-white font-medium text-sm">ENSOLARADO</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-3 mt-6">
+                    <div class="shadow-md py-1 px-3 rounded-lg">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-temperature-three-quarters text-lg text-red-700"></i>
+                            <div>
+                                <h4 class="text-sm">Temp. max</h4>
+                                <p id="temp-max" class="text-xs">32<sup>Cº</sup></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shadow-md py-1 px-3 rounded-lg">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-temperature-three-quarters text-lg text-blue-500"></i>
+                            <div>
+                                <h4 class="text-sm">Temp. min</h4>
+                                <p id="temp-min" class="text-xs">32<sup>Cº</sup></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shadow-md py-1 px-3 rounded-lg">
+                        <div class="flex items-center gap-3 ">
+                            <i class="fa-solid fa-droplet text-lg text-blue-600"></i>
+                            <div>
+                                <h4 class="text-sm">Humidade</h4>
+                                <p id="humidity" class="text-xs">32</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shadow-md py-1 px-3 rounded-lg">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-wind text-lg text-purple-600"></i>
+                            <div>
+                                <h4 class="text-sm">Vento</h4>
+                                <p id="windSpeed" class="text-xs">32</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <script src="./js/script.js" ></script>
+</body>
+</html>
